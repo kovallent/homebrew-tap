@@ -3,7 +3,6 @@
 class KvCli < Formula
   desc "Local contract guardrails for Python data pipelines"
   homepage "https://github.com/kovallent/kv-cli"
-  version "0.6.1"
   license "MIT"
 
   on_macos do
