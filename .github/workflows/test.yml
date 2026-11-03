@@ -1,0 +1,35 @@
+name: test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  formula:
+    name: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        # Apple silicon, Linux x86-64 and Linux ARM64: three of the four
+        # archives the formula installs. GitHub no longer offers an Intel
+        # macOS runner.
+        os: [macos-latest, ubuntu-latest, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+
+      - name: Tap this checkout
+        run: brew tap | grep -qx kovallent/tap || brew tap kovallent/tap "$GITHUB_WORKSPACE"
+
+      - name: Install
+        run: brew install kovallent/tap/kv-cli
+
+      - name: Test
+        run: brew test kovallent/tap/kv-cli
+
+      - name: Audit
+        run: brew audit --strict kovallent/tap/kv-cli
