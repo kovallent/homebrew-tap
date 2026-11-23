@@ -7,23 +7,23 @@ class KvCli < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/kovallent/kv-cli/releases/download/v0.14.0/kv-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "9764ad78b4e4b0864a06738f23f1e7b54fc3a94d9e1121dd392a3e9f7f1c7b9d"
+      url "https://github.com/kovallent/kv-cli/releases/download/v0.14.1/kv-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "94188e87df42178bc29bc2b6fb5d2c4e1ccb64dde869fcea7a467b81a764b617"
     end
     on_intel do
-      url "https://github.com/kovallent/kv-cli/releases/download/v0.14.0/kv-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "f4ecf6251d98c36e2fbad12593917705b5e4bcfcb7ebd5c87d876f2fe515fc95"
+      url "https://github.com/kovallent/kv-cli/releases/download/v0.14.1/kv-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "d641b2155c07d1db95b33335a2bfd07bc23834236434cf07ddb271750051b7cd"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/kovallent/kv-cli/releases/download/v0.14.0/kv-cli-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "bc8481d16317ada6b36519d4f94a4c49f035e4f880a1687e245f7779760876da"
+      url "https://github.com/kovallent/kv-cli/releases/download/v0.14.1/kv-cli-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "b5be8ef2989127c96dc34fde9ecb8f123290b9679bb6fcf66fddc12a5468747a"
     end
     on_intel do
-      url "https://github.com/kovallent/kv-cli/releases/download/v0.14.0/kv-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "edd34e2f388570832b6b3bb39cbbc60341909dd7079cddb24262e1dc14467dff"
+      url "https://github.com/kovallent/kv-cli/releases/download/v0.14.1/kv-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a7dfeb52e44f4713e9df49e8987b344e0c5a7fe6fb9545e8d826a734ed2dfd1b"
     end
   end
 
